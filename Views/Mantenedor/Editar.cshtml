@@ -1,0 +1,76 @@
+﻿@model ContactoModel
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+  <div class="card-header">
+    Editar Empleados
+  </div>
+  <div class="card-body">
+   
+      <form asp-action="Editar" asp-controller="Mantenedor" method="post">
+           <input asp-for="ID" type="hidden" class="form-control">
+      <div class="mb-3">
+        <label  class="form-label">Nombre</label>
+        <input asp-for="Nombre" type="text" class="form-control">
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+      </div>
+      <div class="mb-3">
+        <label  class="form-label">Primer Apellido</label>
+        <input asp-for="PrimerApellido" type="text" class="form-control">
+         <span asp-validation-for="PrimerApellido" class="text-danger"></span>
+      </div>
+         <div class="mb-3">
+        <label  class="form-label">Segundo Apellido</label>
+        <input asp-for="SegundoApellido" type="text" class="form-control">
+         <span asp-validation-for="SegundoApellido" class="text-danger"></span>
+      </div>
+       <div class="mb-3">
+        <labe  class="form-label">Edad</label>
+        <input asp-for="Edad" type ="text" class="form-control">
+         <span asp-validation-for="Edad" class="text-danger"></span>
+      </div>
+       <div class="mb-3">
+        <label  class="form-label">Fecha de Nacimiento</label>
+        <input asp-for="FechaNacimiento" type="date" class="form-control">
+         <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+      </div>
+      <div class="mb-3">
+        <labe  class="form-label">Genero</label>
+        <input asp-for="Genero" type ="text" class="form-control">
+         <span asp-validation-for="Genero" class="text-danger"></span>
+      </div>
+      <div class="mb-3">
+        <labe  class="form-label">Telefóno</label>
+        <input asp-for="Telefono" type ="text" class="form-control">
+         <span asp-validation-for="Telefono" class="text-danger"></span>
+      </div>
+      <div class="mb-3">
+        <labe  class="form-label">Dirección</label>
+        <input asp-for="Direccion" type ="text" class="form-control">
+         <span asp-validation-for="Direccion" class="text-danger"></span>
+      </div>
+      <div class="mb-3">
+        <labe  class="form-label">Correo Electrónico</label>
+        <input asp-for="CorreoElectronico" type ="text" class="form-control">
+         <span asp-validation-for="CorreoElectronico" class="text-danger"></span>
+      </div>
+      <div class="mb-3">
+        <label  class="form-label">Fecha de Ingreso</label>
+        <input asp-for="FechaIngreso" type="date" class="form-control">
+         <span asp-validation-for="FechaIngreso" class="text-danger"></span>
+      </div>
+      <div class="mb-3">
+        <labe  class="form-label">Departamento</label>
+        <input asp-for="Departamento" type ="text" class="form-control">
+         <span asp-validation-for="Departamento" class="text-danger"></span>
+      </div>
+      <button type="submit" class="btn btn-primary">Guardar</button>
+      <a asp-action="Listar" asp-controller="Mantenedor" class="btn btn-warning" >Volver a la lista</a>
+    </form>
+
+  </div>
+</div>
+
